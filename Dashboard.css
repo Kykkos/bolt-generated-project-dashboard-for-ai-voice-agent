@@ -1,0 +1,129 @@
+.dashboard-container {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+  color: #333;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.date-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.date-filter label {
+  font-weight: 500;
+  color: #555;
+}
+
+.date-filter input[type="date"] {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  color: #333;
+  background-color: #fff;
+}
+
+.date-filter button {
+  background-color: #3b82f6;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.date-filter button:hover {
+  background-color: #2563eb;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.metric-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.metric-card h3 {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.metric-card .metric-value {
+  font-size: 2.2em;
+  font-weight: 700;
+  color: #3b82f6; /* Primary blue color */
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column for smaller screens */
+  gap: 30px;
+}
+
+@media (min-width: 768px) {
+  .charts-grid {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Two columns for larger screens */
+  }
+}
+
+.chart-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.chart-card h3 {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Recharts specific styling */
+.recharts-wrapper {
+  font-size: 0.85em;
+}
+
+.recharts-tooltip-wrapper {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid #ddd !important;
+  border-radius: 5px !important;
+  padding: 10px !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.recharts-tooltip-label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.recharts-tooltip-item {
+  color: #555;
+}
